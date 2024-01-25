@@ -8,6 +8,6 @@ export default defineConfig({
     outDir: 'build',
     assetsDir: 'assets',
   },
-  base: '/soontobestraussner/',
+  base: './',
 
 })
