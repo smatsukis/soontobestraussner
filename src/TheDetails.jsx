@@ -9,6 +9,7 @@ import GoogleMap from "./components/GoogleMap";
 import { useState, useEffect } from "react";
 
 
+
 function TheDetails() {
 
   const [isVisible, setIsVisible] = useState(false);

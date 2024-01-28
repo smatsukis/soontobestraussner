@@ -6,6 +6,7 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import { useState, useEffect } from "react";
 import Checkbox from "./components/TickBox";
+import rsvp from './assets/rsvp-final.jpg';
 
 
 function RSVP() {
@@ -179,7 +180,7 @@ function RSVP() {
       <div className="container p-8">
         <Heading header="RSVP" />
 
-        <InfoCard image="src/assets/rsvp-final.jpg" includeImage={true}>
+        <InfoCard image={rsvp} includeImage={true}>
 
           {!submitForm1 && (
             <>

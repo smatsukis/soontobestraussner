@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar";
 import InfoCard from "./components/InfoCard";
 import Heading from "./components/Heading";
 import { useState, useEffect } from "react";
+import image1 from './assets/story-1.jpg';
+import image2 from './assets/story-2.jpg';
+import image3 from './assets/story-3.jpg';
 
 function OurStory() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +27,7 @@ function OurStory() {
 
   <div className="mb-5 flex">
 
-<InfoCard includeImage={true} image="src/assets/story-1.jpg">
+<InfoCard includeImage={true} image={image1}>
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
                 Heading 1 here
               </p>
@@ -37,7 +40,7 @@ function OurStory() {
 
   <div className="mb-5 flex">
 
-<InfoCard includeImage={true} image="src/assets/story-2.jpg">
+<InfoCard includeImage={true} image={image2}>
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
                 Heading 2 here
               </p>
@@ -50,7 +53,7 @@ function OurStory() {
 
   <div className="mb-5 flex">
 
-<InfoCard includeImage={true} image="src/assets/story-3.jpg">
+<InfoCard includeImage={true} image={image3}>
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
                 Heading 3 here
               </p>
