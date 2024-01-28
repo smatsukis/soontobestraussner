@@ -6,11 +6,21 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faChampagneGlasses, faGift, faHeart, faPenToSquare, faShirt } from '@fortawesome/free-solid-svg-icons';
 import GoogleMap from "./components/GoogleMap";
+import { useState, useEffect } from "react";
+
 
 function TheDetails() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
       <NavBar />
+      <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
 
       <div className="container p-8">
       
@@ -20,7 +30,7 @@ function TheDetails() {
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faHeart} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faHeart} className="w-6 h-6 mr-2 text-stone-400" />
                 Wedding Details
               </p>
               <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
@@ -28,16 +38,17 @@ function TheDetails() {
                 Ceremony Time: 3pm<br></br>
                 Location: The Nut Farm, Hartbeesport, South Africa</p>
                 <GoogleMap/>
+                <p className="mt-2 text-zinc-800">Please note that it is a dirt road leading up to the venue.</p>
             </InfoCard>
           </div>
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faBed} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faBed} className="w-6 h-6 mr-2 text-stone-400" />
                 Accomodation
               </p>
               <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
-              <p className="mt-2 text-zinc-800">Here are some accomodation options near the venue:</p>
+              <p className="mt-2 text-zinc-800">It would be advisable not to drive home due to the night time road conditions. If you are able to stay over, here are some accomodation options near the venue:</p>
               <li><a className="underline hover:text-stone-400" href="https://www.cradlehealthspa.co.za/" target="_blank">Crade Health Spa - 5km away</a></li>
               <li><a className="underline hover:text-stone-400" href="https://www.cradlehealthspa.co.za/" target="_blank">xxxx</a></li>
             </InfoCard>
@@ -45,7 +56,7 @@ function TheDetails() {
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faShirt} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faShirt} className="w-6 h-6 mr-2 text-stone-400" />
                 Dress Code
               </p>
               <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
@@ -55,7 +66,7 @@ function TheDetails() {
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faChampagneGlasses} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faChampagneGlasses} className="w-6 h-6 mr-2 text-stone-400" />
                 It's a Date Night!
               </p>
               <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
@@ -65,7 +76,7 @@ function TheDetails() {
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faPenToSquare} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faPenToSquare} className="w-6 h-6 mr-2 text-stone-400" />
                 RSVP
               </p>
               <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
@@ -75,7 +86,7 @@ function TheDetails() {
           <div className="mb-5 flex">
             <InfoCard>
               <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-              <FontAwesomeIcon icon={faGift} className="w-6 h-6 mr-2" />
+              <FontAwesomeIcon icon={faGift} className="w-6 h-6 mr-2 text-stone-400" />
 
                 Gifts
               </p>
@@ -84,6 +95,7 @@ function TheDetails() {
             </InfoCard>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -1,25 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      ubuntu: ['Ubuntu', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-      cursive: ['Dancing Script', 'cursive'],
-      minimal: ['Roboto', 'sans-serif'],
-
+      ubuntu: ["Ubuntu", "sans-serif"],
+      serif: ["Merriweather", "serif"],
+      cursive: ["Dancing Script", "cursive"],
+      minimal: ["Roboto", "sans-serif"],
     },
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      
+    },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-  
-}
-
+  plugins: [require("@tailwindcss/forms")],
+};

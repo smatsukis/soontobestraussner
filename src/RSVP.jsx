@@ -4,8 +4,9 @@ import Heading from "./components/Heading";
 import Dropdown from "./components/Dropdown";
 import Button from "./components/Button";
 import Input from "./components/Input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Checkbox from "./components/TickBox";
+
 
 function RSVP() {
   const [numberOfGuests, setNumberOfGuests] = useState(1);
@@ -20,6 +21,12 @@ function RSVP() {
 
   }])
   const [submitForm1, setSubmitForm] = useState(false);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
 
 
@@ -143,8 +150,6 @@ function RSVP() {
               "None of these are suited to my dietary requirements",
             ]}
             defaultValue="Select ..."
-            value={guest.preferredBurgerMeat}
-            onChange={(e) => handleInputChange(e, index)}
             name={`preferredBurgerMeat${index + 1}`}
           />
         </div>
@@ -156,8 +161,6 @@ function RSVP() {
           <textarea
             type="text"
             name={`additionalComments${index + 1}`}
-            value={guest.additionalComments}
-            onChange={(e) => handleInputChange(e, index)}
             className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-stone-400 focus:ring focus:border-stone-200 focus:ring-opacity-50"
           />
         </div>
@@ -172,7 +175,7 @@ function RSVP() {
   return (
     <>
       <NavBar />
-
+      <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container p-8">
         <Heading header="RSVP" />
 
@@ -258,6 +261,7 @@ function RSVP() {
           
         </InfoCard>
       </div>
+    </div>
     </>
   );
 }
