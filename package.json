@@ -1,7 +1,7 @@
 {
   "name": "soon-to-be-straussner",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",
@@ -35,7 +37,8 @@
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "react-scripts": "latest"
   },
-  "homepage": "/soontobestraussner/"
+  "homepage": "https://username.github.io/soontobestraussner"
 }
