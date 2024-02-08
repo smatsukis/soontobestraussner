@@ -29,10 +29,10 @@ function OurStory() {
 
 <InfoCard includeImage={true} image={image1}>
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-                They were right! Opposite's do attract!
+                Heading 1 here
               </p>
               <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
-              <p className="mt-2 text-zinc-800">Classical musician meets coder</p>
+              <p className="mt-2 text-zinc-800">Mini write up here here for header 1</p>
 
   </InfoCard>
 
