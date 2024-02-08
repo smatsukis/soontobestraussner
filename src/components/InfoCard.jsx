@@ -6,7 +6,9 @@ export default function InfoCard({
   ...props
 }) {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl font-minimal flex-1">
+    
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl font-paragraph flex-1">
+      
       <div className="md:flex">
         {includeImage && !imageRight && (
           <div className="md:shrink-0">

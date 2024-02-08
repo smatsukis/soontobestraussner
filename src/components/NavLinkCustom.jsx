@@ -18,7 +18,7 @@ export default function NavLinkCustom({ children, to, ...props }) {
       <NavLink
         to={to}
         {...props}
-        className={`font-minimal border border-stone-300 text-stone-300 hover:text-zinc-800 hover:bg-stone-300 py-2 px-4 rounded-sm transition-all relative z-0 aria-[current=page]:text-zinc-800 aria-[current=page]:bg-stone-300`}
+        className={`font-paragraph border border-champagne text-champagne hover:text-zinc-800 hover:bg-champagne py-2 lg:px-4 xl:px-4 px-2 rounded-sm transition-all relative z-0 aria-[current=page]:text-zinc-800 aria-[current=page]:bg-champagne`}
       >
         {children}
       </NavLink>

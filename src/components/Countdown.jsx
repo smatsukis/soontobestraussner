@@ -29,7 +29,7 @@ function CountdownTimer() {
 
 
   return (
-    <div className="text-zinc-800 p-3 rounded-lg font-minimal">
+    <div className="p-3 rounded-lg font-paragraph uppercase">
       <div className="flex items-center">
         <div className="flex flex-col items-center mr-8">
           <p className="text-4xl font-bold">{timeRemaining.days}</p>

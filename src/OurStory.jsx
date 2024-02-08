@@ -19,7 +19,7 @@ function OurStory() {
       <>
 
       <NavBar/>
-      <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`transition-opacity duration-1000 bg-champagne ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
 <div className="container p-8">
 
   <Heading header="Our Story"/>
@@ -29,10 +29,10 @@ function OurStory() {
 
 <InfoCard includeImage={true} image={image1}>
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
-                Heading 1 here
+                They were right! Opposite's do attract!
               </p>
-              <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
-              <p className="mt-2 text-zinc-800">Mini write up here here for header 1</p>
+              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
+              <p className="mt-2 text-zinc-800">Classical musician meets coder</p>
 
   </InfoCard>
 
@@ -44,7 +44,7 @@ function OurStory() {
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
                 Heading 2 here
               </p>
-              <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
+              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
               <p className="mt-2 text-zinc-800">Mini write up here here for header 2</p>
 
   </InfoCard>
@@ -57,7 +57,7 @@ function OurStory() {
 <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
                 Heading 3 here
               </p>
-              <hr className="border-t-2 border-stone-300 mt-4 mb-4 w-full" />
+              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
               <p className="mt-2 text-zinc-800">Mini write up here here for header 3</p>
 
   </InfoCard>

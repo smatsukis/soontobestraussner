@@ -81,7 +81,7 @@ function RSVP() {
             type="text"
             value={rsvpObject[i].name}
             onChange={(e) => handleGuestNameChange(e, i)}
-            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-stone-400 focus:ring focus:border-stone-200 focus:ring-opacity-50"
+            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50"
           />
         </div>
       );
@@ -116,7 +116,7 @@ function RSVP() {
           <input
             type="text"
             name={`contactNumber${index + 1}`}
-            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-stone-400 focus:ring focus:border-stone-200 focus:ring-opacity-50"
+            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50"
           />
         </div>
           
@@ -162,11 +162,11 @@ function RSVP() {
           <textarea
             type="text"
             name={`additionalComments${index + 1}`}
-            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-stone-400 focus:ring focus:border-stone-200 focus:ring-opacity-50"
+            className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50"
           />
         </div>
 
-        <hr className="border-t-2 border-stone-300 mt-4 mb-4" />
+        <hr className="border-t-2 border-champagne mt-4 mb-4" />
 
 
       </div>
@@ -177,8 +177,13 @@ function RSVP() {
     <>
       <NavBar />
       <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="bg-champagne bg-cover bg-fixed min-h-screen">
       <div className="container p-8">
         <Heading header="RSVP" />
+
+        
+
+        
 
         <InfoCard image={rsvp} includeImage={true}>
 
@@ -190,11 +195,12 @@ function RSVP() {
           <p className="mt-2 text-zinc-800">
             Please RSVP on the form below for yourself, and any guests that will
             be accompanying you by the: <span className="mt-2 text-zinc-800 font-bold">
-            17 July 2024
+            17 June 2024
           </span>
           </p>
           
-          <hr className="border-t-2 border-stone-300 mt-4 mb-4" />
+          
+          <hr className="border-t-4 border-champagne mt-4 mb-4" />
           <div className="mb-4">
             <label className="block text-zinc-800 text-sm font-bold mb-2">
               Number of Guests:
@@ -240,7 +246,7 @@ function RSVP() {
           <p className="mt-2 text-zinc-800">
             Please complete all the dietary requirements below for you and your guests.
           </p>
-          <hr className="border-t-2 border-stone-300 mt-4 mb-4" />
+          <hr className="border-t-2 border-champagne mt-4 mb-4" />
           
 
           {generateGuestSections()} 
@@ -262,6 +268,7 @@ function RSVP() {
           
         </InfoCard>
       </div>
+    </div>
     </div>
     </>
   );
