@@ -113,7 +113,7 @@ function RSVP() {
 
   useEffect(() => {
     setIsFirstButtonDisabled(rsvpObject.every(input => input.name.trim() !== '') && mainResponse!=="Select ..." && numberOfGuests >= 1);
-  }, [rsvpObject]);
+  }, [rsvpObject, numberOfGuests, mainResponse]);
 
 
   
