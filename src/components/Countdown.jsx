@@ -32,19 +32,19 @@ function CountdownTimer() {
     <div className="p-3 rounded-lg font-paragraph uppercase">
       <div className="flex items-center">
         <div className="flex flex-col items-center mr-8">
-          <p className="text-4xl font-bold">{timeRemaining.days}</p>
+          <p className="lg:text-4xl xl:text-4xl text-2xl font-bold">{timeRemaining.days}</p>
           <p className="text-sm">Days</p>
         </div>
         <div className="flex flex-col items-center mr-8">
-          <p className="text-4xl font-bold">{timeRemaining.hours}</p>
+          <p className="lg:text-4xl xl:text-4xl text-2xl font-bold">{timeRemaining.hours}</p>
           <p className="text-sm">Hours</p>
         </div>
         <div className="flex flex-col items-center mr-8">
-          <p className="text-4xl font-bold">{timeRemaining.minutes}</p>
+          <p className="lg:text-4xl xl:text-4xl text-2xl font-bold">{timeRemaining.minutes}</p>
           <p className="text-sm">Minutes</p>
         </div>
         <div className="flex flex-col items-center mr-8">
-          <p className="text-4xl font-bold">{timeRemaining.seconds}</p>
+          <p className="lg:text-4xl xl:text-4xl text-2xl font-bold">{timeRemaining.seconds}</p>
           <p className="text-sm">Seconds</p>
         </div>
       </div>

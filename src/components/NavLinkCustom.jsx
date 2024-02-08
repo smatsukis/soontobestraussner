@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 export default function NavLinkCustom({ children, to, ...props }) {
   const [activeLink, setActiveLink] = useState(null);
 
-  console.log(window.location.pathname);
-
   return (
     <div className="relative">
       {window.location.pathname === to && (

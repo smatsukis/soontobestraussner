@@ -8,22 +8,21 @@ export default {
       cursive: ["Dancing Script", "cursive"],
       minimal: ["Roboto", "sans-serif"],
       heading: ["League Gothic", "sans-serif"],
-      paragraph: ["Aleo", "serif"]
+      paragraph: ["Aleo", "serif"],
     },
     container: {
       center: true,
     },
     extend: {
       colors: {
-        champagne: '#DBD3C7'
+        champagne: "#DBD3C7",
       },
       letterSpacing: {
-        'heading': '0.1em',
+        heading: "0.1em",
       },
-      backgroundImage: theme => ({
-        'custom': "url('src/assets/background.png')",
-      }),
-      
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

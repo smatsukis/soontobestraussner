@@ -10,7 +10,7 @@ import rsvp from './assets/rsvp-final.jpg';
 
 
 function RSVP() {
-  const [numberOfGuests, setNumberOfGuests] = useState(1);
+  const [numberOfGuests, setNumberOfGuests] = useState();
   const [mainResponse, setMainResponse] = useState("Select ...");
   const [rsvpObject, setRsvpObject] = useState([{
     name: "",
@@ -25,9 +25,13 @@ function RSVP() {
 
   const [isVisible, setIsVisible] = useState(false);
 
+  const [isFirstButtonDisabled, setIsFirstButtonDisabled] = useState(true);
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+
 
 
 
@@ -83,6 +87,12 @@ function RSVP() {
             onChange={(e) => handleGuestNameChange(e, i)}
             className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50"
           />
+          {
+            rsvpObject[i].name == "" && (
+              <span className="text-xs">* Required </span>
+            )
+          }
+
         </div>
       );
     }
@@ -100,6 +110,16 @@ function RSVP() {
     setSubmitForm(true);
     
   }
+
+  useEffect(() => {
+    setIsFirstButtonDisabled(rsvpObject.every(input => input.name.trim() !== '') && mainResponse!=="Select ..." && numberOfGuests >= 1);
+  }, [rsvpObject]);
+
+
+  
+ 
+
+  
 
 
   const generateGuestSections = () => {
@@ -208,11 +228,10 @@ function RSVP() {
 
             <Input
               id="guest-number"
-              type="number"
+              type="text"
               value={numberOfGuests}
               onChange={handleNumberOfGuestsChange}
             >
-              1
             </Input>
 
             {generateInputBoxes()}
@@ -231,7 +250,7 @@ function RSVP() {
               defaultValue="Select ..."
               onChange={handleResponseChange}
             />
-            <Button disabled={mainResponse==="Select ..."} onClick={submit}>Submit</Button>
+            <Button disabled={!isFirstButtonDisabled} onClick={submit}>Submit</Button>
           </div>
             
             </>
@@ -250,7 +269,7 @@ function RSVP() {
           
 
           {generateGuestSections()} 
-          <Button disabled={mainResponse==="Select ..."} onClick={submit}>Submit</Button>
+          <Button disabled={false} onClick={submit}>Submit</Button>
 
             
             </>
