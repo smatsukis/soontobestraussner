@@ -1,25 +1,35 @@
-
+import { useState, useEffect } from "react";
 
 export default function HorizontalRule({ children, ...props }) {
-    // const isLgOrXl = useBreakpoint('(min-width: 1024px)');
+  const [flowerImages, setFlowerImages] = useState([]);
 
-    return (
-        <div className="flex items-center">
-          
-        {/* <div className="">
-          <img src="/daisy.png" alt="Daisy" className="w-8 h-8 rounded-full" />
-        </div> */}
-      
-  <div className="flex-1">
-  <hr className="border-t-4 border-zinc-800" />
-  </div>
-  <div className="">
-    <img src="/daisy.png" alt="Daisy" className="w-8 h-8 rounded-full" />
-  </div>
-</div>
+  useEffect(() => {
+    const daisyImages = ["/daisy1.png", "/daisy2.png", "/daisy3.png"];
+    const shuffledDaisyImages = shuffleArray(daisyImages);
+    setFlowerImages(shuffledDaisyImages);
+  }, []);
 
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
+
+  return (
+    <div className="relative">
+      <div className="absolute bottom-0 left-0 w-full flex justify-end space-x-4">
+        <img src={flowerImages[0]} alt="Daisy" className="w-20 h-20 mb-1" />
         
-    );
-  }
-
-
+        {/* <div className="hidden lg:inline xl:inline">
+        <img src={flowerImages[1]} alt="Daisy" className="w-20 h-20 mb-1" />
+          <img src={flowerImages[2]} alt="Daisy" className="w-20 h-20 mb-1" />
+        </div> */}
+        {window.innerWidth > 768 && <><img src={flowerImages[1]} alt="Daisy" className="w-20 h-20 mb-1" /><img src={flowerImages[2]} alt="Daisy" className="w-20 h-20 mb-1" /></>}
+      </div>
+      <hr className="border-t-4 border-zinc-800" />
+    </div>
+  );
+}

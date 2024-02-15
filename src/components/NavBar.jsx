@@ -7,7 +7,7 @@ function NavBar() {
 
     
  
-      <div className="w-full lg:gap-4 xl:gap-4 lg:px-8 xl:px-8 px-1 py-8 flex justify-center items-center text-center bg-zinc-800 font-minimal">
+      <div className="w-full lg:gap-4 xl:gap-4 lg:px-8 xl:px-8 px-1 py-8 flex justify-center items-center text-center bg-white font-minimal">
   
          
         
