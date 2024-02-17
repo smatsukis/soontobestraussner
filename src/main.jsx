@@ -27,6 +27,8 @@ const router = createBrowserRouter([
     path: "/rsvp",
     element: <RSVP/>,
   },
+
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
