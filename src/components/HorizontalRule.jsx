@@ -21,8 +21,8 @@ export default function HorizontalRule({ children, ...props }) {
   return (
     <div className="relative">
       <div className="absolute bottom-0 left-0 w-full flex justify-end lg:space-x-4 xl:space-x-4 z-0">
-        <img src={flowerImages[0]} alt="Daisy" className="w-20 h-20 mb-1 hidden sm:block" />
-        <img src={flowerImages[1]} alt="Daisy" className="w-20 h-20 mb-1" />
+        <img src={flowerImages[0]} alt="Daisy" className="w-20 h-20 mb-1 hidden sm:block xs:block" />
+        <img src={flowerImages[1]} alt="Daisy" className="w-20 h-20 mb-1 hidden sm:block xs:block" />
         <img src={flowerImages[2]} alt="Daisy" className="w-20 h-20 mb-1" />
       
       </div>
