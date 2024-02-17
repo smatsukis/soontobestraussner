@@ -37,11 +37,10 @@ function TheDetails() {
           <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4">
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold flex">
-                  <FontAwesomeIcon icon={faHeart} className="w-6 h-6 mr-2 text-champagne" />
+                <p className="block text-lg leading-tight font-bold flex">
+                  <FontAwesomeIcon icon={faHeart} className="w-6 h-6 mr-2 mb-2 text-zinc-800" />
                   Wedding Details
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                
 
                 <p className="mt-2">
@@ -57,11 +56,10 @@ function TheDetails() {
             </div>
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold flex">
-                  <FontAwesomeIcon icon={faBed} className="w-6 h-6 mr-2 text-champagne" />
+                <p className="block text-lg leading-tight font-bold flex">
+                  <FontAwesomeIcon icon={faBed} className="w-6 h-6 mr-2 mb-2 text-zinc-800" />
                   Accomodation
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                 <p className="mt-2 text-zinc-800">
                   It would be advisable not to drive home due to the night time
                   road conditions. If you are able to stay over, here are some
@@ -90,14 +88,13 @@ function TheDetails() {
             </div>
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold flex">
+                <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon
                     icon={faShirt}
-                    className="w-6 h-6 mr-2 text-champagne"
+                    className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
                   Dress Code
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                 <p className="mt-2">
                   Time to dust off that cocktail dress and try on your suit,
                   please could we request formal attire is worn for this event.
@@ -108,14 +105,13 @@ function TheDetails() {
             </div>
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
+                <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon
                     icon={faChampagneGlasses}
-                    className="w-6 h-6 mr-2 text-champagne"
+                    className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
                   It's a Date Night!
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                 <p className="mt-2">
                   Although we love your little ones, we think you need a night
                   off! We regret no children.
@@ -124,21 +120,20 @@ function TheDetails() {
             </div>
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
+                <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon
                     icon={faPenToSquare}
-                    className="w-6 h-6 mr-2 text-champagne"
+                    className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
                   RSVP
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                 <p className="mt-2">
                   Please could you RSVP by the 17th of July 2024 for catering
                   purposes. If you haven't done so already, you can RSVP{" "}
                   <a
                     href="/rsvp"
                     target="_blank"
-                    className="underline hover:text-champagne"
+                    className="underline hover:text-zinc-800"
                   >
                     here!
                   </a>
@@ -147,14 +142,13 @@ function TheDetails() {
             </div>
             <div className="mb-5 flex">
               <InfoCard>
-                <p className="block mt-1 text-lg leading-tight font-bold flex">
+                <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon
                     icon={faGift}
-                    className="w-6 h-6 mr-2 text-champagne"
+                    className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
                   Gifts
                 </p>
-                <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
                 <p className="mt-4">
                   The most important gift to us is your company on our special
                   day. If you would like to give us a gift, a monetary

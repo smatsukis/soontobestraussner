@@ -28,10 +28,9 @@ function OurStory() {
   <div className="mb-5 flex">
 
 <InfoCard includeImage={true} image={image1}>
-<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
+<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex mb-3">
                 Heading 1 here
               </p>
-              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
               <p className="mt-2 text-zinc-800">Mini write up here here for header 1</p>
 
   </InfoCard>
@@ -41,10 +40,9 @@ function OurStory() {
   <div className="mb-5 flex">
 
 <InfoCard includeImage={true} image={image2}>
-<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
+<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex mb-3">
                 Heading 2 here
               </p>
-              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
               <p className="mt-2 text-zinc-800">Mini write up here here for header 2</p>
 
   </InfoCard>
@@ -54,10 +52,9 @@ function OurStory() {
   <div className="mb-5 flex">
 
 <InfoCard includeImage={true} image={image3}>
-<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex">
+<p className="block mt-1 text-lg leading-tight font-bold text-zinc-800 flex mb-3">
                 Heading 3 here
               </p>
-              <hr className="border-t-4 border-champagne mt-4 mb-4 w-full" />
               <p className="mt-2 text-zinc-800">Mini write up here here for header 3</p>
 
   </InfoCard>
