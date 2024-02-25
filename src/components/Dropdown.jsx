@@ -8,7 +8,7 @@ export default function Dropdown({
     return (
       <div className="relative">
         <select
-          className={`peer mt-1 block w-full rounded-sm border-zinc-800 shadow-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50`}
+          className={`peer mt-1 block mb-4 w-full rounded-sm border-zinc-800 shadow-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50`}
           {...props}
         >
           <option>{defaultValue}</option>

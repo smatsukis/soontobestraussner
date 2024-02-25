@@ -39,7 +39,7 @@ function TheDetails() {
               <InfoCard>
                 <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon icon={faHeart} className="w-6 h-6 mr-2 mb-2 text-zinc-800" />
-                  Wedding Details
+                 <span className="mt-0.5">Wedding Details</span> 
                 </p>
                
 
@@ -58,7 +58,8 @@ function TheDetails() {
               <InfoCard>
                 <p className="block text-lg leading-tight font-bold flex">
                   <FontAwesomeIcon icon={faBed} className="w-6 h-6 mr-2 mb-2 text-zinc-800" />
-                  Accomodation
+                  
+                  <span className="mt-0.5">Accomodation</span> 
                 </p>
                 <p className="mt-2 text-zinc-800">
                   It would be advisable not to drive home due to the night time
@@ -93,7 +94,8 @@ function TheDetails() {
                     icon={faShirt}
                     className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
-                  Dress Code
+                  
+                  <span className="mt-0.5">Dress Code</span> 
                 </p>
                 <p className="mt-2">
                   Time to dust off that cocktail dress and try on your suit,
@@ -110,7 +112,8 @@ function TheDetails() {
                     icon={faChampagneGlasses}
                     className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
-                  It's a Date Night!
+                  
+                  <span className="mt-0.5">It's a Date Night!</span> 
                 </p>
                 <p className="mt-2">
                   Although we love your little ones, we think you need a night
@@ -125,7 +128,8 @@ function TheDetails() {
                     icon={faPenToSquare}
                     className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
-                  RSVP
+                  
+                  <span className="mt-0.5">RSVP</span> 
                 </p>
                 <p className="mt-2">
                   Please could you RSVP by the 17th of July 2024 for catering
@@ -147,7 +151,8 @@ function TheDetails() {
                     icon={faGift}
                     className="w-6 h-6 mr-2 text-zinc-800 mb-2"
                   />
-                  Gifts
+                  
+                  <span className="mt-0.5">Gifts</span> 
                 </p>
                 <p className="mt-4">
                   The most important gift to us is your company on our special
