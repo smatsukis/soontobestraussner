@@ -4,7 +4,7 @@ export default function Checkbox({ children, ...props }) {
       <label className="block truncate">
         <input
           type="checkbox"
-          className={`rounded-full border-gray-300 text-champagne shadow-sm focus:ring-champagne focus:ring focus:ring-offset-0 focus:border-champagne focus:ring-opacity-50`}
+          className={`ml-1.5 rounded-full border-gray-300 text-champagne shadow-sm focus:ring-champagne focus:ring focus:ring-offset-0 focus:border-champagne focus:ring-opacity-50`}
           value={children}
           {...props}
         />

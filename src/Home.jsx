@@ -6,15 +6,15 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    // const timeout = setTimeout(() => {
+    //   setLoading(false);
+    // }, 3000);
 
-    return () => clearTimeout(timeout);
+    // return () => clearTimeout(timeout);
   }, []);
 
   return (
