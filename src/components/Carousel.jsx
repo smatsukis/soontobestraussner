@@ -44,7 +44,7 @@ const Carousel = ({ images }) => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-10 pl-2 text-champagne"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-10 pl-2 text-champagne cursor-pointer"
             onClick={goToPrevSlide}
           >
             <path
@@ -60,7 +60,7 @@ const Carousel = ({ images }) => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-10 pr-2 text-champagne"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-10 pr-2 text-champagne cursor-pointer"
             onClick={goToNextSlide}
           >
             <path

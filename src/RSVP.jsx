@@ -8,7 +8,11 @@ import { useState, useEffect } from "react";
 import Checkbox from "./components/TickBox";
 import rsvp from "./assets/rsvp-final.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner, faAsterisk, faCheck, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSpinner,
+  faAsterisk,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 function RSVP() {
   const [numberOfGuests, setNumberOfGuests] = useState();
@@ -211,50 +215,49 @@ function RSVP() {
     });
   };
 
+  const generateGuestButtons = () => {
+    return rsvpObject.map((guest, index) => (
+      <div key={index}>
+         {guest.contactNumber.trim() != "" &&
+        guest.preferredBurgerMeat != "" &&
+        guest.preferredBurgerMeat != "Select ..." ? (
+          <button
+          className={`${
+            openSectionIndex === index ? "ring ring-offset-2 ring-emerald-400" : ""
+          } text-emerald-600 bg-emerald-100 p-2 rounded-sm shadow-md mb-4`}
+            onClick={() => handleAccordionToggle(index)}
+          >
+            <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mr-1" />
+            Guest {index + 1} - {guest.name}
+          </button>
+        ) : (
+          <button
+          className={`${
+            openSectionIndex === index ? "ring ring-offset-2 ring-red-300" : ""
+          } text-red-500 bg-red-100 p-2 rounded-sm shadow-md mb-4`}
+            onClick={() => handleAccordionToggle(index)}
+          >
+            <FontAwesomeIcon icon={faAsterisk} className="w-2 h-2 mb-2 mr-1" />
+            Guest {index + 1} - {guest.name}
+          </button>
+        )}
+      </div>
+    ));
+  };
+
+ 
+
   const generateGuestSections = () => {
     return rsvpObject.map((guest, index) => (
       <div key={index}>
-        <div
-          className="flex justify-between w-full items-center cursor-pointer"
-          onClick={() => handleAccordionToggle(index)}
-        >
-          <div>
-            <p className="block mt-4 text-lg leading-tight font-bold text-zinc-800">
-            {openSectionIndex === index ? (<FontAwesomeIcon
-                icon={faChevronUp}
-                className="w-4 h-4 mr-2 inline"
-              />):(<FontAwesomeIcon
-                icon={faChevronDown}
-                className="w-4 h-4 mr-2 inline"
-              />)}
-             Guest {index + 1} - {guest.name}
-            </p>
-          </div>
-          <div>
-            <p className="text-xs text-zinc-800 mt-2.5">
-              {guest.contactNumber.trim() != "" && guest.preferredBurgerMeat != "" && guest.preferredBurgerMeat != "Select ..." ? (
-                <>
-              <FontAwesomeIcon
-                icon={faCheck}
-                className="w-4 h-4 mt-2 mr-1"
-              />
-              Complete
-              </>
-              ): (<>
-              <FontAwesomeIcon
-                icon={faAsterisk}
-                className="w-2 h-2 mt-2 mr-1 mb-0.5"
-              />
-              Information Required
-              </>)}
-            
-              
-            </p>
-          </div>
-        </div>
-
         {openSectionIndex === index && (
-          <div className="accordion-content">
+          <div
+          className={`${
+            openSectionIndex === index  && ""
+          } mt-4 transition-all duration-500 ease-in-out`}
+        >
+            <p className="font-bold text-lg">{index + 1}. {guest.name}:</p>
+            <hr className="border-t-1 border-zinc-800 mb-6"></hr>
             <div className="mb-4 mt-2">
               <label className="block text-zinc-800 text-sm font-bold mb-2">
                 Contact Number:
@@ -391,6 +394,7 @@ function RSVP() {
                       onChange={handleNumberOfGuestsChange}
                     ></Input>
 
+
                     {generateInputBoxes()}
 
                     {loading ? (
@@ -421,7 +425,7 @@ function RSVP() {
                       and your guests.
                     </p>
                     <div className="mt-4 mb-4"></div>
-
+                    {generateGuestButtons()}
                     {generateGuestSections()}
 
                     {loading ? (
@@ -438,14 +442,14 @@ function RSVP() {
                           Submit
                         </Button>
                         {!isSecondButtonDisabled && (
-                          <>
-                            <br></br>
+                          <div className="mt-2">
+                     
                             <span className="pt-2 text-xs">
                               * Please enter a contact number and select a
                               burger meat choice for all guests before
                               submitting{" "}
                             </span>
-                          </>
+                          </div>
                         )}
                       </>
                     )}
@@ -463,7 +467,8 @@ function RSVP() {
                     </p>
                   </>
                 )}
-              {successToGoogleSheet && mainResponse != "No! Unfortunately I can't make it." && (
+              {successToGoogleSheet &&
+                mainResponse != "No! Unfortunately I can't make it." && (
                   <>
                     <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
                       Success!

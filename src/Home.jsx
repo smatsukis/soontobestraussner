@@ -39,7 +39,7 @@ function Home() {
                   <img
                     src="/daisy.png"
                     alt="Daisy"
-                    className="w-8 h-8 inline"
+                    className="w-8 h-8 inline mb-2 mr-1.5"
                   />{" "}
                   CARL
                 </h1>
