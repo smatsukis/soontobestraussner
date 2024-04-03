@@ -62,8 +62,7 @@ function TheDetails() {
                   <span className="mt-0.5">Accomodation</span> 
                 </p>
                 <p className="mt-2 text-zinc-800">
-                  It would be advisable not to drive home due to the night time
-                  road conditions. If you are able to stay over, here are some
+                  It would be advisable not to drive home as the road is bad at night. If you are able to stay over, here are some
                   accomodation options near the venue:
                 </p>
                 <li>

@@ -260,12 +260,13 @@ function RSVP() {
             <hr className="border-t-1 border-zinc-800 mb-6"></hr>
             <div className="mb-4 mt-2">
               <label className="block text-zinc-800 text-sm font-bold mb-2">
-                Contact Number:
+                Contact Number (please include international dialing code):
               </label>
               <input
                 type="text"
                 name={`contactNumber${index + 1}`}
                 value={guest.contactNumber}
+                placeholder="e.g. +27 82 123 4567"
                 onChange={(e) => handleContactNumberChange(e, index)}
                 className="border w-full border-zinc-800 px-4 py-2 rounded-sm focus:ring-champagne focus:ring focus:border-stone-200 focus:ring-opacity-50"
               />
