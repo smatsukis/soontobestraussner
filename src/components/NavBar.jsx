@@ -11,7 +11,7 @@ function NavBar() {
   
          
         
-          <nav className="flex space-x-4 pt-2">
+          <nav className="flex space-x-3 pt-2">
             <NavLinkCustom to="/">Home</NavLinkCustom>
             <NavLinkCustom to="/our-story">Our Story</NavLinkCustom>
             <NavLinkCustom to="/details">The Details</NavLinkCustom>

@@ -218,13 +218,15 @@ function RSVP() {
   const generateGuestButtons = () => {
     return rsvpObject.map((guest, index) => (
       <div key={index}>
-         {guest.contactNumber.trim() != "" &&
+        {guest.contactNumber.trim() != "" &&
         guest.preferredBurgerMeat != "" &&
         guest.preferredBurgerMeat != "Select ..." ? (
           <button
-          className={`${
-            openSectionIndex === index ? "ring ring-offset-2 ring-emerald-400" : ""
-          } text-emerald-600 bg-emerald-100 p-2 rounded-sm shadow-md mb-4`}
+            className={`${
+              openSectionIndex === index
+                ? "ring ring-offset-2 ring-emerald-400"
+                : ""
+            } text-emerald-600 bg-emerald-100 p-2 rounded-sm shadow-md mb-4`}
             onClick={() => handleAccordionToggle(index)}
           >
             <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mr-1" />
@@ -232,9 +234,11 @@ function RSVP() {
           </button>
         ) : (
           <button
-          className={`${
-            openSectionIndex === index ? "ring ring-offset-2 ring-red-300" : ""
-          } text-red-500 bg-red-100 p-2 rounded-sm shadow-md mb-4`}
+            className={`${
+              openSectionIndex === index
+                ? "ring ring-offset-2 ring-red-300"
+                : ""
+            } text-red-500 bg-red-100 p-2 rounded-sm shadow-md mb-4`}
             onClick={() => handleAccordionToggle(index)}
           >
             <FontAwesomeIcon icon={faAsterisk} className="w-2 h-2 mb-2 mr-1" />
@@ -245,18 +249,18 @@ function RSVP() {
     ));
   };
 
- 
-
   const generateGuestSections = () => {
     return rsvpObject.map((guest, index) => (
       <div key={index}>
         {openSectionIndex === index && (
           <div
-          className={`${
-            openSectionIndex === index  && ""
-          } mt-4 transition-all duration-500 ease-in-out`}
-        >
-            <p className="font-bold text-lg">{index + 1}. {guest.name}:</p>
+            className={`${
+              openSectionIndex === index && ""
+            } mt-4 transition-all duration-500 ease-in-out`}
+          >
+            <p className="font-bold text-lg">
+              {index + 1}. {guest.name}:
+            </p>
             <hr className="border-t-1 border-zinc-800 mb-6"></hr>
             <div className="mb-4 mt-2">
               <label className="block text-zinc-800 text-sm font-bold mb-2">
@@ -395,7 +399,6 @@ function RSVP() {
                       onChange={handleNumberOfGuestsChange}
                     ></Input>
 
-
                     {generateInputBoxes()}
 
                     {loading ? (
@@ -444,7 +447,6 @@ function RSVP() {
                         </Button>
                         {!isSecondButtonDisabled && (
                           <div className="mt-2">
-                     
                             <span className="pt-2 text-xs">
                               * Please enter a contact number and select a
                               burger meat choice for all guests before
@@ -472,11 +474,14 @@ function RSVP() {
                 mainResponse != "No! Unfortunately I can't make it." && (
                   <>
                     <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
-                      Success!
+                      Success! You have submitted your RSVP for {rsvpObject.length} guests!
                     </p>
+                    <hr className="border-t-1 border-zinc-800 mt-4"></hr>
+
                     <p className="mt-2 text-zinc-800">
-                      We can't wait to eat, drink, and dance the night away with
-                      you! See you in{" "}
+                      If you would like to make any amendments before the 17th
+                      of June, please resubmit your RSVP for that guest. We can't wait to eat,
+                      drink, and dance the night away with you! See you in{" "}
                       {Math.floor(
                         (new Date("2024-08-17T15:00:00") - new Date()) /
                           (1000 * 60 * 60 * 24)
