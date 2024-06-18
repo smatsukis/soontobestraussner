@@ -358,7 +358,10 @@ function RSVP() {
             <Heading header="RSVP" />
 
             <InfoCard image={rsvp} includeImage={true}>
-              {!submitForm1 && (
+              <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
+                    Unfortunately no more responses are being gathered as the RSVP deadline was the 17th of June 2024.
+                  </p>
+{/*               {!submitForm1 && (
                 <>
                   <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
                     We can't wait to celebrate with you!
@@ -416,8 +419,8 @@ function RSVP() {
                     )}
                   </div>
                 </>
-              )}
-              {submitForm1 &&
+              )} */}
+{/*               {submitForm1 &&
                 mainResponse === "Yes! I'm in!" &&
                 !successToGoogleSheet && (
                   <>
@@ -457,8 +460,8 @@ function RSVP() {
                       </>
                     )}
                   </>
-                )}{" "}
-              {submitForm1 &&
+                )}{" "} */}
+{/*               {submitForm1 &&
                 mainResponse === "No! Unfortunately I can't make it." && (
                   <>
                     <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
@@ -469,8 +472,8 @@ function RSVP() {
                       the day and have a toast from afar!
                     </p>
                   </>
-                )}
-              {successToGoogleSheet &&
+                )} */}
+{/*               {successToGoogleSheet &&
                 mainResponse != "No! Unfortunately I can't make it." && (
                   <>
                     <p className="block mt-1 text-lg leading-tight font-bold text-zinc-800">
@@ -489,7 +492,7 @@ function RSVP() {
                       days!
                     </p>
                   </>
-                )}
+                )} */}
             </InfoCard>
           </div>
         </div>
